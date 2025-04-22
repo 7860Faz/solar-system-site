@@ -1,8 +1,12 @@
-import Header from './Header.jsx'
+import Header from './Header.jsx';
+import Planets from './Planets.jsx';
 
 function App() {
     return(
-      <Header></Header>
+      <>
+        <Header/>
+        <Planets/>
+      </>
     );
     
 }
