@@ -16,7 +16,7 @@ function App() {
 
     return(
         <>
-            <Header />
+            <Header/>
             
             <p>Rocky planets:</p>
             <Planets planets={rockyPlanets} />
