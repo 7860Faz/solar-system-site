@@ -1,13 +1,20 @@
 
 
 function Planets() {
-    const planet1 = "Earth";    // it's Earth Day
-    const planet2 = "Mars";
+    
+    const Planets = [
+        {name: "Planet X", radius: 1000, temperature: 273},
+        {name: "Mars", radius: 5000, temperature: 253},
+        {name: "Earth", radius: 3000, temperature: 280},
+    ];
+
+    const List = Planets.map(planet => 
+        <li key={planet.name}>{planet.name}</li>
+    );
 
     return(
         <ol>
-            <li>Planet {planet1}</li>
-            <li>Planet {planet2}</li>
+            {List}
         </ol>
     );
 }
