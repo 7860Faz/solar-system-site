@@ -1,15 +1,13 @@
 
 
-function Planets() {
-    
-    const Planets = [
-        {name: "Planet X", radius: 1000, temperature: 273},
-        {name: "Mars", radius: 5000, temperature: 253},
-        {name: "Earth", radius: 3000, temperature: 280},
-    ];
+function Planets(data) {
+
+    const Planets = data.planets;
 
     const List = Planets.map(planet => 
-        <li key={planet.name}>{planet.name}</li>
+        <li key={planet.id}>
+            {planet.name}: {planet.radius} Km radius; {planet.temperature}K temperature
+        </li>
     );
 
     return(
