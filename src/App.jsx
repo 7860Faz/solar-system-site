@@ -1,10 +1,13 @@
-import Header from "./Header";
+import Intro from "./intro.jsx";
+import Form from "./form.jsx";
 
 function App() {
     
     return(
         <>
-            <Header />
+            <Intro />
+            <Form />
+
         </>
     );
 }
