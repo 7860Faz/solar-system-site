@@ -1,1 +1,9 @@
 @import 'tailwindcss';
+
+body {
+    background-image: url(/stars_background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: aliceblue;
+}
