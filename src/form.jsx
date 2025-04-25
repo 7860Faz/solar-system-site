@@ -7,8 +7,8 @@ export default function Form() {
                             border-4 border-gray-950 rounded-xl">
 
                 <input className="bg-gray-900 w-full rounded-l-xl p-2"
-                        type="url" title="Enter your API key"
-                        placeholder="Enter your API Key, ex:"/>
+                        type="text" title="Enter planet"
+                        placeholder="Enter a celestial body, e.g. Moon"/>
 
                 <input className="bg-gray-900 ml-1 p-2 rounded-r-xl
                                     text-gray-300"
