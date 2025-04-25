@@ -1,14 +1,15 @@
 import { useState } from "react";
 
-export default function Form( {fetchData} ) {
+export default function Form( {fetchData, fetchImage} ) {
 
     const [input, setInput] = useState('');
     const handleSubmit = (e) => {
         e.preventDefault();
 
         fetchData(input);
-
         setInput('');
+
+        fetchImage(`${input}`);
     }
 
     return(
@@ -21,7 +22,7 @@ export default function Form( {fetchData} ) {
                     type="text" 
                     title="Enter planet"
                     value={input}
-                    placeholder="Enter a celestial body, e.g. Moon, Jupiter, Titan"
+                    placeholder="Enter a celestial body from the Solar System, e.g. Moon, Jupiter, Titan"
                     onChange={e => setInput(e.target.value)}/>
 
                 <input className="bg-gray-900 ml-1 p-2 rounded-r-xl
