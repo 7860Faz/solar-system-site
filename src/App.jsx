@@ -1,5 +1,6 @@
 import Intro from "./intro.jsx";
 import Form from "./form.jsx";
+import PlanetCard from "./planetCard.jsx";
 
 function App() {
     
@@ -7,6 +8,8 @@ function App() {
         <>
             <Intro />
             <Form />
+
+            <PlanetCard />
 
         </>
     );
