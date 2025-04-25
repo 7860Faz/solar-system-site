@@ -5,14 +5,18 @@ import PlanetCard from "./planetCard.jsx";
 
 
 function App() {
-
-    const [data, setData] = useState(null);
-
     const Earth = {
-        "Name": "Earth",
-        "Temperature": "288 K",
-        "Mass": 5.972e24
+        englishName: "Earth",
+        avgTemp: 0,
+        mass: {
+            massExponent: 22,
+            massValue: 7.346
+        },
+        meanRadius: 6371.0084
     }
+
+    const [data, setData] = useState(Earth);
+
 
     const fetchFromApi = async (celestialBody) => {
 
@@ -37,7 +41,7 @@ function App() {
             <Intro />
             <Form fetchData={fetchFromApi}/>
 
-            <PlanetCard planet={Earth} />
+            <PlanetCard planetInfo={data} />
 
         </>
     );

@@ -1,13 +1,13 @@
 
-export default function PlanetCard(planetinfo) {
-    let planet = planetinfo.planet;
+export default function PlanetCard(data) {
+    const planet = data.planetInfo;
     
     return(
         <div className="flex justify-center">
             <div className="flex justify-center flex-col  
                           bg-gray-950 m-6 p-2 w-fit rounded-5">
 
-                <h1 className="bg-gray-900 w-full p-2 text-center
+                <h1 className="bg-gray-900 w-full p-4 text-center
                               text-gray-300 font-black text-4xl">
                     Planet Card
                 </h1>
@@ -17,8 +17,11 @@ export default function PlanetCard(planetinfo) {
                     alt="earth pic" />
             
                 <section>
-                    <Info type="Name" info={planet["Name"]}/>
-                    <Info type="Temperature" info={planet["Temperature"]}/>
+                    <Info type="Name" info={planet.englishName}/>
+                    <Info type="Temperature" info={`${planet.avgTemp} K`}/>
+                    <Info type="Mass" 
+                        info={`${planet.mass.massValue}e+${planet.mass.massExponent} Kg`} />
+                    <Info type="Radius" info={`${planet.meanRadius} Km`} />
 
                 </section>
             </div>
