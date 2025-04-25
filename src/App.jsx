@@ -3,6 +3,7 @@ import Header from "./Header.jsx";
 import Intro from "./intro.jsx";
 import Form from "./form.jsx";
 import PlanetCard from "./planetCard.jsx";
+import Footer from "./footer.jsx";
 
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
         englishName: "Earth",
         avgTemp: 288,
         mass: {
-            massExponent: 22,
-            massValue: 7.346
+            massExponent: 24,
+            massValue: 5.972
         },
         meanRadius: 6371.0084
     }
@@ -64,12 +65,14 @@ function App() {
         <>
             <Header />
             <Intro />
+            {/* form handling and data fetching */}
             <Form fetchData={fetchPlanetData} 
                 fetchImage={fetchImageData}/>
-
+            {/* displaying results */}
             <PlanetCard planetInfo={data} 
                         image={imageData}/>
 
+            <Footer />
         </>
     );
 }
