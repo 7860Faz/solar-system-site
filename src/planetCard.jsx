@@ -1,5 +1,6 @@
 
-export default function PlanetCard() {
+export default function PlanetCard(planetinfo) {
+    let planet = planetinfo.planet;
     
     return(
         <div className="flex justify-center">
@@ -16,8 +17,8 @@ export default function PlanetCard() {
                     alt="earth pic" />
             
                 <section>
-                    <Info type="Name" info="Earth"/>
-                    <Info type="Temperature" info="Earth"/>
+                    <Info type="Name" info={planet["Name"]}/>
+                    <Info type="Temperature" info={planet["Temperature"]}/>
 
                 </section>
             </div>
