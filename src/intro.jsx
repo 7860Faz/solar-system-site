@@ -2,13 +2,15 @@
 export default function Intro() {
     // introduction element
     return(
-        <div className='flex justify-center'>
-            <h1 className=" bg-gray-900 m-5 p-6 w-fit max-w-4xl
-                            border-5 border-gray-950 rounded-2xl
-                            font-black text-center text-8xl 
-                            text-shadow-gray-200 text-shadow-lg">
-                Discover the Solar System
-            </h1>
-        </div>
+        <section className='flex justify-center'>
+            <div className="bg-gray-950 m-1 p-4 pl-9 pr-9 max-w-4xl
+                            rounded-xl">
+                <h1 className="bg-gray-900 p-4 w-2xl rounded-lg
+                                font-black text-center text-8xl 
+                                text-shadow-gray-400 text-shadow-lg">
+                    Discover the Solar System
+                </h1>
+            </div>
+        </section>
     );
 }

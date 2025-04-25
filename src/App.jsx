@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "./Header.jsx";
 import Intro from "./intro.jsx";
 import Form from "./form.jsx";
 import PlanetCard from "./planetCard.jsx";
@@ -7,7 +8,7 @@ import PlanetCard from "./planetCard.jsx";
 function App() {
     const Earth = {
         englishName: "Earth",
-        avgTemp: 0,
+        avgTemp: 288,
         mass: {
             massExponent: 22,
             massValue: 7.346
@@ -61,6 +62,7 @@ function App() {
 
     return(
         <>
+            <Header />
             <Intro />
             <Form fetchData={fetchPlanetData} 
                 fetchImage={fetchImageData}/>
