@@ -4,7 +4,7 @@ export default function Footer() {
     return(
         <footer className="flex flex-col m-0 bg-gray-950">
             <div className="bg-amber-600 h-2"></div>
-            <div className="p-3">
+            <div className="flex flex-col self-center p-3">
                 <Link link="https://github.com/Adrian-rospx/solar-system-site"
                     name="GitHub Project link"/>
                 <Link link='https://api.nasa.gov/' name='NASA image API' />
@@ -19,7 +19,7 @@ export default function Footer() {
 
 function Link(data) {
     return(
-        <p className="bg-gray-900 w-full m-1 p-1 text-gray-400">
+        <p className="bg-gray-900 w-2xl m-1 p-1 text-gray-400">
             {data.name}: &nbsp;
             <a href={data.link} className="italic">
                 {data.link}
