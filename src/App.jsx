@@ -15,33 +15,36 @@ function App() {
         meanRadius: 6371.0084
     }
 
+    const [imageData, setImageData] = useState(
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/960px-The_Earth_seen_from_Apollo_17.jpg"
+    );
     const [data, setData] = useState(Earth);
 
 
-    const fetchFromApi = async (celestialBody) => {
+    const fetchPlanetData = async (celestialBody) => {
 
         try{
-            const result = await fetch(
+            const result = await fetch (
                 `https://api.le-systeme-solaire.net/rest/bodies/${encodeURIComponent(celestialBody)}` 
             );
             if(!result.ok)
-                throw new Error("network response was not ok");
+                throw new Error("network response returned an error");
                 
             const json = await result.json();
             setData(json);
-        }
-        catch (err){
+        } catch (err) {
             console.error("fetching data from API failed");
+        } finally {
+            console.log(data);
         }
-        console.log(data);
     }
     
     return(
         <>
             <Intro />
-            <Form fetchData={fetchFromApi}/>
+            <Form fetchData={fetchPlanetData}/>
 
-            <PlanetCard planetInfo={data} />
+            <PlanetCard planetInfo={data} image={imageData}/>
 
         </>
     );

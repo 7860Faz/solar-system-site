@@ -1,6 +1,7 @@
 
 export default function PlanetCard(data) {
     const planet = data.planetInfo;
+    const image = data.image;
     
     return(
         <div className="flex justify-center">
@@ -13,7 +14,7 @@ export default function PlanetCard(data) {
                 </h1>
 
                 <img className='w-lg max-w-fit' 
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/960px-The_Earth_seen_from_Apollo_17.jpg" 
+                    src={image}
                     alt="earth pic" />
             
                 <section>
