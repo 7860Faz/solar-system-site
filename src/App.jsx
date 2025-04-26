@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Header from "./Header.jsx";
-import Intro from "./intro.jsx";
-import Form from "./form.jsx";
-import PlanetCard from "./planetCard.jsx";
-import Footer from "./footer.jsx";
+import Header from "./components/Header.jsx";
+import Intro from "./components/intro.jsx";
+import Form from "./components/form.jsx";
+import PlanetCard from "./components/planetCard.jsx";
+import Footer from "./components/footer.jsx";
 
 
 function App() {
