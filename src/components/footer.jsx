@@ -2,7 +2,7 @@
 export default function Footer() {
 
     return(
-        <footer className="flex flex-col m-0 bg-gray-950">
+        <footer className="flex flex-col m-0 bg-gray-950 w-full mt-auto">
             <div className="bg-amber-600 h-2"></div>
             <div className="flex flex-col self-center p-3">
                 <Link link="https://github.com/Adrian-rospx/solar-system-site"
